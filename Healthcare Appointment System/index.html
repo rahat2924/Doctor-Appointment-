@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Healthcare Appointment System</title>
+</head>
+<body>
+
+    <div class="container">
+        <img src="images/Healthcare Banner.jpg" alt="Healthcare Banner" class="banner-image">
+
+        <div id="login-form">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="button" onclick="login()">Login</button>
+            </form>
+        </div>
+
+        <div id="register-form">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <label for="regUsername">Username:</label>
+                <input type="text" id="regUsername" name="regUsername" required>
+
+                <label for="regPassword">Password:</label>
+                <input type="password" id="regPassword" name="regPassword" required>
+
+                <button type="button" onclick="register()">Register</button>
+            </form>
+        </div>
+
+        <div id="appointment-form" style="display:none;">
+            <h2>Schedule Appointment</h2>
+            <form id="appointmentForm">
+                <label for="doctor">Select Doctor:</label>
+                <select id="doctor" name="doctor" required>
+                    <option value="1">Dr. Rahim</option>
+                    <option value="2">Dr. Karim</option>
+                </select>
+
+                <label for="date">Select Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <button type="button" onclick="scheduleAppointment()">Schedule Appointment</button>
+            </form>
+        </div>
+
+        <div id="medical-history" style="display:none;">
+            <h2>Medical History</h2>
+            <!-- Display medical history data here -->
+        </div>
+
+        <div id="notifications"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
